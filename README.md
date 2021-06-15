@@ -1,5 +1,6 @@
 # puppeteer-frontend-nuxt
 test
+test2
 
 ## Build Setup
 
