@@ -14,10 +14,12 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: [
+    { src: "~/assets/app.scss", lang: "scss" } //作成したscssファイルを読み込ませます。
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: "~/plugins/vue-carousel", ssr: false }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -26,12 +28,17 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/axios"],
+  modules: ["@nuxtjs/axios", "@nuxtjs/style-resources"],
+
+  // styleResources: {
+  //   scss: ["~/assets/app.scss"]
+  // },
+
   axios: {},
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-  server:{
+  server: {
     port: 8000,
-    host: '0.0.0.0'
+    host: "0.0.0.0"
   }
 };
